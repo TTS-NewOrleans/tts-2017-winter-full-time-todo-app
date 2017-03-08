@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :user_tasks, dependent: :destroy
 
   # Create a user with the hash from the Facebook API
   def self.create_with_omniauth(auth)
